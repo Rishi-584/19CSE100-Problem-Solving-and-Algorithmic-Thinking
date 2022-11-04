@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22015"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:06:10 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTExLTA0OzA5OjE4OjI4IEFNOzMwNjM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTExLTA0OzA5OjE4OjMyIEFNOzE7Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTExLTA0OzA5OjA3OjA2IEFNO3RlbXAgY29udmVydGVyLmZwcmc7ODI3Mg=="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTExLTA0OzExOjA2OjEwIEFNOzM7MzE1NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a converter of temperature from fahrenheit to celsius"/>
+            <declare name="C" type="Real" array="False" size=""/>
+            <comment text="Always assign the temperature variables as real"/>
+            <declare name="F" type="Real" array="False" size=""/>
+            <comment text="the input should be in fahrenheit"/>
+            <output expression="&quot;Enter the temperature&quot;" newline="True"/>
+            <input variable="F"/>
+            <declare name="K" type="Real" array="False" size=""/>
+            <assign variable="C" expression="5*(F-32)/9"/>
+            <comment text="the output temperaature will be in celsius"/>
+            <output expression="&quot;The temperature in celsius is &quot; &amp;C" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
