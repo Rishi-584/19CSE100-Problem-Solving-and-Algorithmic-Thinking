@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22015"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 10:52:56 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTExLTE4OzEwOjM2OjQ4IEFNOzMwNjI="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTExLTE4OzEwOjM4OjUwIEFNOzI7Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTExLTE4OzA4OjU1OjA5IEFNO0FUTS5mcHJnOzcwNTQ="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTExLTE4OzEwOjUyOjU2IEFNOzM7MzE2OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a complete ATM which is used for all functions such as cash withdrawal, deposit, fetching bank balance and changing the PIN"/>
+            <declare name="cash, pin, accn" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;WELCOME TO ATM&quot;" newline="True"/>
+            <output expression="&quot;Enter your name&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter your account number&quot;" newline="True"/>
+            <input variable="accn"/>
+            <declare name="bb" type="Real" array="False" size=""/>
+            <comment text="The initial bank balance is a variable so we can enter any amount you wish.For now, I am entering 50000 as the bank balance"/>
+            <assign variable="bb" expression="50000"/>
+            <assign variable="pin" expression="3161"/>
+            <output expression="&quot;Enter the amount to withdraw&quot;" newline="True"/>
+            <input variable="cash"/>
+            <declare name="rb" type="Real" array="False" size=""/>
+            <comment text="I have assigned a remaining balance variable so that the user can check that how much amount is remained in the account after transaction"/>
+            <assign variable="rb" expression="bb-cash"/>
+            <if expression="rb &gt; 1000">
+                <then>
+                    <if expression="cash%500=0">
+                        <then>
+                            <output expression="&quot;Enter the pin&quot;" newline="True"/>
+                            <input variable="pin"/>
+                            <if expression="pin=3161">
+                                <then>
+                                    <output expression="&quot;Your transaction is in process&quot;" newline="True"/>
+                                    <output expression="&quot;Please collect the cash&quot;" newline="True"/>
+                                    <output expression="&quot;the remaining balance is &quot;&amp; rb" newline="True"/>
+                                    <output expression="&quot;Thank you.....&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;The entered pin is incorrect&quot;" newline="True"/>
+                                    <output expression="&quot;Thank you.....&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Please enter an amount in multiples of 500&quot;" newline="True"/>
+                            <output expression="&quot;The account holders are requested to coleect only the multiples of 500 such as 1000,1500, so on.&quot;" newline="True"/>
+                            <output expression="&quot;Remaining balance is &quot;&amp;bb" newline="True"/>
+                            <output expression="&quot;Thank you&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="I have given a minimum balance of 1000Rs in the bank"/>
+                    <output expression="&quot;The account will have no minimum balance if you withdraw a huge amount&quot;" newline="True"/>
+                    <output expression="&quot;This could charge you a penalty from the respective bank for not maintaining minimum balance&quot;" newline="True"/>
+                    <output expression="&quot;A minimum balance of 1000Rs should be maintained&quot;" newline="True"/>
+                    <output expression="&quot;Thank you.....&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
