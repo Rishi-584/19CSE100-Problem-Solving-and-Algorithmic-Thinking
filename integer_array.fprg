@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rushy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:46:42 PM"/>
+        <attribute name="created" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEyLTA5OzA5OjE2OjQyIEFNOzI1ODE="/>
+        <attribute name="edited" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEyLTA5OzExOjQ2OjQyIFBNOzI7MjcwMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a programme which assigns the integer elements in the array"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="nums" type="Integer" array="True" size="10"/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <comment text="we use a for loop to assign the elements to their corresponding positions"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Enter the number for index = [&quot;&amp;index&amp;&quot;]&quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="nums[index]" expression="num"/>
+            </for>
+            <output expression="&quot;Array Contents are &quot;" newline="True"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;nums[&quot;&amp;index&amp;&quot;] = &quot;&amp;nums[index]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

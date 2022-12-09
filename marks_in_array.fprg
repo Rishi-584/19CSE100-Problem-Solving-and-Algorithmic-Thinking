@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rushy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-10 12:04:51 AM"/>
+        <attribute name="created" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEyLTA5OzA5OjQwOjU5IEFNOzI1ODY="/>
+        <attribute name="edited" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEyLTA5OzA5OjQxOjEwIEFNOzE7UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEyLTA5OzA5OjE2OjQyIEFNO2ludGVnZXIgYXJyYXkuZnByZzs3MTgz"/>
+        <attribute name="edited" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEyLTEwOzEyOjA0OjUxIEFNOzk7MjY4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a programme which gives the information about students with their roll numbers, total marks and average marks using arrays"/>
+            <declare name="index, n" type="Integer" array="False" size=""/>
+            <comment text=""/>
+            <output expression="&quot;Enter the number of students&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="Marks" type="Real" array="True" size="5"/>
+            <declare name="rollnum" type="Real" array="False" size=""/>
+            <declare name="markss" type="Real" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <declare name="num" type="Real" array="False" size=""/>
+            <comment text="the variable num is given so that the given marks of the subjects are added and assigned into total marks"/>
+            <assign variable="num" expression="0"/>
+            <comment text="for loop is used to assign the elements to their corresponding positions"/>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter the roll number of the student&quot;" newline="True"/>
+                <input variable="rollnum"/>
+                <declare name="sbj" type="Integer" array="False" size=""/>
+                <comment text=""/>
+                <for variable="sbj" start="1" end="5" direction="inc" step="1">
+                    <output expression="&quot;Enter the marks of the student in subject no: &quot;&amp;sbj" newline="True"/>
+                    <input variable="markss"/>
+                    <assign variable="num" expression="num+markss"/>
+                </for>
+                <declare name="total" type="Integer" array="False" size=""/>
+                <assign variable="total" expression="num"/>
+                <output expression="&quot;The roll number of the student is &quot;&amp;rollnum" newline="True"/>
+                <output expression="&quot;The total marks of roll no : &quot;&amp;rollnum&amp;&quot; are &quot;&amp;total" newline="True"/>
+                <assign variable="avg" expression="total/5"/>
+                <output expression="&quot;The averge marks of roll no : &quot;&amp;rollnum&amp;&quot; are &quot;&amp;avg" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
