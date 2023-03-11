@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22015"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:38:47 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTEyLTAyOzEwOjEwOjUwIEFNOzMwNDE="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTEyLTAyOzEwOjM4OjQ3IEFNOzU7MzE2OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a fibonacci series"/>
+            <declare name="a, b, c, d" type="Integer" array="False" size=""/>
+            <comment text="The Fibonacci series is a series in which a number is equal to the sum of the two preceding numbers."/>
+            <comment text="Fibonacci(n)=Fibonacci(n-1)+Fibonacci(n-2) whre n&gt;=2"/>
+            <comment text="Fibonacci(0)=0&#13;&#10;Fibonacci(1)=1"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="c" expression="0"/>
+            <assign variable="d" expression="0"/>
+            <comment text="in this table, we will get the Fibonacci values of 1 to 10"/>
+            <while expression="a&lt;=10">
+                <output expression="&quot;Fibonacci(&quot;&amp;a&amp;&quot;)=&quot;&amp;d" newline="True"/>
+                <assign variable="d" expression="b+c"/>
+                <assign variable="b" expression="c"/>
+                <assign variable="c" expression="d"/>
+                <assign variable="a" expression="a+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

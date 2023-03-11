@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rushy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 10:23:22 AM"/>
+        <attribute name="created" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEwLTI4OzEwOjEzOjU5IEFNOzI1Nzc="/>
+        <attribute name="edited" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEwLTI4OzEwOjE1OjAyIEFNOzI7UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEwLTI4OzA5OjIyOjE0IEFNO015IERldGFpbHMuZnByZzs2Nzg3"/>
+        <attribute name="edited" value="UnVzaHk7UlVTSFlFTkRSQTsyMDIyLTEwLTI4OzEwOjIzOjIyIEFNOzE7MjY3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Subjectcode" type="Integer" array="False" size=""/>
+            <declare name="RollNumber" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter your Roll number : &quot;" newline="True"/>
+            <input variable="RollNumber"/>
+            <for variable="Subjectcode" start="1" end="3" direction="inc" step="1">
+                <output expression="&quot;Enter the Subject code : &quot;" newline="True"/>
+                <input variable="Subjectcode"/>
+                <declare name="Marks" type="Real" array="False" size=""/>
+                <output expression="&quot;Enter your Marks : &quot;" newline="True"/>
+                <input variable="Marks"/>
+            </for>
+            <declare name="Total" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter your Total : &quot;" newline="True"/>
+            <input variable="Total"/>
+            <declare name="Average" type="Real" array="False" size=""/>
+            <assign variable="Average" expression="Total / 3"/>
+            <output expression="&quot;Your average marks is : &quot; &amp;average" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

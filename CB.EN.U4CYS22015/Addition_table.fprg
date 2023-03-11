@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22015"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:55:10 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTEyLTAyOzA4OjU2OjU1IEFNOzMwNjM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTEyLTAyOzA5OjUzOjU5IEFNOzE7Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTEyLTAyOzA5OjI4OjMzIEFNO211bHRpcGxpY2F0aW9uIHRhYmxlLmZwcmc7ODg5Nw=="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNTsyMDIyMjNNQVlDMDA1MjsyMDIyLTEyLTAyOzA5OjU1OjEwIEFNOzc7MzE2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is an addition table which provides the sum of the given number and the numbers from 1 to 10"/>
+            <declare name="a, c" type="Integer" array="False" size=""/>
+            <comment text="we are assigning the value of c as 1 so that the addition starts from 1"/>
+            <assign variable="c" expression="1"/>
+            <comment text="this is a while loop which is used for this table"/>
+            <assign variable="a" expression="1"/>
+            <while expression="a&lt;=10">
+                <output expression="&quot;The addition table of &quot;&amp;a&amp;&quot; is &quot;" newline="True"/>
+                <assign variable="c" expression="1"/>
+                <while expression="c&lt;=10">
+                    <output expression="a&amp;&quot;+&quot;&amp;c&amp;&quot;=&quot;&amp;a+c" newline="True"/>
+                    <comment text="we are giving a post increment so that the next value is not equal to the previous value"/>
+                    <assign variable="c" expression="c+1"/>
+                </while>
+                <assign variable="a" expression="a+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
